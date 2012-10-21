@@ -1,0 +1,51 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fusao.Controls">
+
+    <Style TargetType="local:AnimatedTextBlock">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:AnimatedTextBlock">    
+                    <Canvas x:Name="MainCanvas">
+                            <TextBlock x:Name="TextBlock1" 
+                                       FlowDirection="{TemplateBinding FlowDirection}"
+                                       FontFamily="{TemplateBinding FontFamily}"
+                                       FontSize="{TemplateBinding FontSize}"
+                                       FontStretch="{TemplateBinding FontStretch}"
+                                       FontStyle="{TemplateBinding FontStyle}"
+                                       FontWeight="{TemplateBinding FontWeight}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       TextWrapping="NoWrap" />
+                            <TextBlock x:Name="TextBlock2" 
+                                       FlowDirection="{TemplateBinding FlowDirection}"
+                                       FontFamily="{TemplateBinding FontFamily}"
+                                       FontSize="{TemplateBinding FontSize}"
+                                       FontStretch="{TemplateBinding FontStretch}"
+                                       FontStyle="{TemplateBinding FontStyle}"
+                                       FontWeight="{TemplateBinding FontWeight}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       TextWrapping="NoWrap"  />                           
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:ApproximateDateBlock">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ApproximateDateBlock">
+                    <local:AnimatedTextBlock x:Name="TextElement"
+                        FlowDirection="{TemplateBinding FlowDirection}"
+                        FontFamily="{TemplateBinding FontFamily}"
+                        FontSize="{TemplateBinding FontSize}"
+                        FontStretch="{TemplateBinding FontStretch}"
+                        FontStyle="{TemplateBinding FontStyle}"
+                        FontWeight="{TemplateBinding FontWeight}"
+                        Foreground="{TemplateBinding Foreground}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Fusao.Controls.Sample.MainPage"
+    IsTabStop="false"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fusao.Controls.Sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Fusao.Controls"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <controls:ApproximateDateBlock x:Name="AnimatedBox1" />
+            <controls:ApproximateDateBlock x:Name="AnimatedBox2" FontSize="40" Width="600"  />
+            <controls:ApproximateDateBlock x:Name="AnimatedBox3" FontSize="40" Width="600"  />
+            <controls:ApproximateDateBlock x:Name="AnimatedBox4" FontSize="40" Width="600"  />
+            <controls:ApproximateDateBlock x:Name="AnimatedBox5" FontSize="40" Width="600"  />
+            <controls:ApproximateDateBlock x:Name="AnimatedBox6" FontSize="40" Width="600"  />
+            <Button x:Name="TestButton" Click="TestButton_Click_1" Content="Test!" />
+        </StackPanel>
+    </Grid>
+</Page>
