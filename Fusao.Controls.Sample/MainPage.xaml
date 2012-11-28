@@ -8,7 +8,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Fusao.Controls"
     mc:Ignorable="d">
+    <Page.Resources>
+    <Style x:Key="BasicAnimatedTextStyle" TargetType="controls:ApproximateDateBlock">
+        <Setter Property="Foreground" Value="{StaticResource ApplicationForegroundThemeBrush}"/>
+        <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
+        <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+        <Setter Property="Typography.StylisticSet20" Value="True"/>
+        <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+        <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+    </Style>
 
+    </Page.Resources>
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
             <controls:ApproximateDateBlock x:Name="AnimatedBox1" />
@@ -18,6 +28,10 @@
             <controls:ApproximateDateBlock x:Name="AnimatedBox5" FontSize="40" Width="600"  />
             <controls:ApproximateDateBlock x:Name="AnimatedBox6" FontSize="40" Width="600"  />
             <Button x:Name="TestButton" Click="TestButton_Click_1" Content="Test!" />
+            <StackPanel Orientation="Horizontal">
+                <controls:ApproximateDateBlock Style="{StaticResource BasicAnimatedTextStyle}" x:Name="AnimatedBox7" FontSize="14" Width="200"/>
+                <TextBlock Style="{StaticResource BasicTextStyle}" FontSize="14" Text=" via imgur.com"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

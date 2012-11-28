@@ -35,6 +35,9 @@ namespace Fusao.Controls
             _mainCanvas = GetTemplateChild("MainCanvas") as Canvas;
 
             if (!IsSurfaceBound()) return;
+            
+            _textBlock1.TextAlignment = TextAlignment.Right;
+            _textBlock2.TextAlignment = TextAlignment.Right;
 
             Canvas.SetLeft(_textBlock1, 0);
             Canvas.SetTop(_textBlock1, 0);
@@ -64,6 +67,12 @@ namespace Fusao.Controls
 
                 _mainCanvas.Clip = new RectangleGeometry() { Rect = new Rect(0, 0, boundingSize.Width, boundingSize.Height) };
                 _boundingSize = boundingSize;
+
+                _textBlock1.Width = boundingSize.Width;
+                _textBlock2.Width = boundingSize.Width;
+
+                //_textBlock2.Height = boundingSize.Height;
+                //_textBlock2.Height = boundingSize.Height;
 
                 return boundingSize;
             }
