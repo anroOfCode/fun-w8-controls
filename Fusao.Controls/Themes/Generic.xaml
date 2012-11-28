@@ -6,9 +6,9 @@
     <Style TargetType="local:AnimatedTextBlock">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="local:AnimatedTextBlock">    
-                    <Canvas x:Name="MainCanvas">
-                            <TextBlock x:Name="TextBlock1" 
+                <ControlTemplate TargetType="local:AnimatedTextBlock">
+                    <Canvas Margin="{TemplateBinding Margin}" x:Name="MainCanvas">
+                        <TextBlock x:Name="TextBlock1" 
                                        FlowDirection="{TemplateBinding FlowDirection}"
                                        FontFamily="{TemplateBinding FontFamily}"
                                        FontSize="{TemplateBinding FontSize}"
@@ -17,7 +17,7 @@
                                        FontWeight="{TemplateBinding FontWeight}"
                                        Foreground="{TemplateBinding Foreground}"
                                        TextWrapping="NoWrap" />
-                            <TextBlock x:Name="TextBlock2" 
+                        <TextBlock x:Name="TextBlock2" 
                                        FlowDirection="{TemplateBinding FlowDirection}"
                                        FontFamily="{TemplateBinding FontFamily}"
                                        FontSize="{TemplateBinding FontSize}"
@@ -25,7 +25,7 @@
                                        FontStyle="{TemplateBinding FontStyle}"
                                        FontWeight="{TemplateBinding FontWeight}"
                                        Foreground="{TemplateBinding Foreground}"
-                                       TextWrapping="NoWrap"  />                           
+                                       TextWrapping="NoWrap"  />
                     </Canvas>
                 </ControlTemplate>
             </Setter.Value>
@@ -37,6 +37,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="local:ApproximateDateBlock">
                     <local:AnimatedTextBlock x:Name="TextElement"
+                        Margin="{TemplateBinding Margin}"
                         FlowDirection="{TemplateBinding FlowDirection}"
                         FontFamily="{TemplateBinding FontFamily}"
                         FontSize="{TemplateBinding FontSize}"
@@ -44,6 +45,35 @@
                         FontStyle="{TemplateBinding FontStyle}"
                         FontWeight="{TemplateBinding FontWeight}"
                         Foreground="{TemplateBinding Foreground}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:RotateButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:RotateButton">
+                    <Grid>
+                        <Button x:Name="MainButton" VerticalAlignment="Center" Style="{StaticResource BackButtonStyle}" Command="{TemplateBinding Command}" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                            <Button.RenderTransform>
+                                <RotateTransform Angle="0"/>
+                            </Button.RenderTransform>
+                        </Button>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:CueTextBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:CueTextBox">
+                    <TextBox x:Name="MainTextBox" 
+                             Foreground="{TemplateBinding ActualTextBrush}"
+                             Width="{TemplateBinding Width}"
+                             Height="{TemplateBinding Height}" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

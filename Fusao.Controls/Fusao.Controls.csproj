@@ -108,6 +108,8 @@
   <ItemGroup>
     <Compile Include="AnimatedTextBlock.cs" />
     <Compile Include="ApproximateDateBlock.cs" />
+    <Compile Include="CueTextBox.cs" />
+    <Compile Include="RotateButton.cs" />
     <Compile Include="Utilities\FriendlyDateStrings.cs" />
     <Compile Include="Utilities\PriorityScheduler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
