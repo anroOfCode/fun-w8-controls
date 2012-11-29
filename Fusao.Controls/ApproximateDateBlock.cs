@@ -37,6 +37,24 @@ namespace Fusao.Controls
         }
 
         #region Dependency Properties
+        public static DependencyProperty TextAlignmentProperty = DependencyProperty.Register(
+            "TextAlignment",
+            typeof(TextAlignment),
+            typeof(ApproximateDateBlock),
+            new PropertyMetadata(TextAlignment.Left));
+
+        public TextAlignment TextAlignment
+        {
+            get
+            {
+                return (TextAlignment)GetValue(TextAlignmentProperty);
+            }
+            set
+            {
+                SetValue(TextAlignmentProperty, value);
+            }
+        }   
+        
         public static DependencyProperty DateProperty = 
             DependencyProperty.Register("Date", typeof(DateTime), typeof(ApproximateDateBlock), new PropertyMetadata(DateTime.Now, DatePropertyChanged));
 
@@ -95,6 +113,8 @@ namespace Fusao.Controls
                 if (newText != _textBlock.Text)
                 {
                     _textBlock.Text = newText;
+                    InvalidateMeasure();
+                    InvalidateArrange();
                 }
             }
 

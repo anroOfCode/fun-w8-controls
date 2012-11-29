@@ -8,7 +8,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="local:AnimatedTextBlock">
                     <Canvas Margin="{TemplateBinding Margin}" x:Name="MainCanvas">
-                        <TextBlock x:Name="TextBlock1" 
+                        <TextBlock x:Name="TextBlock1"                                        
+                                       TextAlignment="{TemplateBinding TextAlignment}"
                                        FlowDirection="{TemplateBinding FlowDirection}"
                                        FontFamily="{TemplateBinding FontFamily}"
                                        FontSize="{TemplateBinding FontSize}"
@@ -19,6 +20,7 @@
                                        Foreground="{TemplateBinding Foreground}"
                                        TextWrapping="NoWrap" />
                         <TextBlock x:Name="TextBlock2" 
+                                       TextAlignment="{TemplateBinding TextAlignment}"
                                        FlowDirection="{TemplateBinding FlowDirection}"
                                        FontFamily="{TemplateBinding FontFamily}"
                                        FontSize="{TemplateBinding FontSize}"
@@ -39,6 +41,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="local:ApproximateDateBlock">
                     <local:AnimatedTextBlock x:Name="TextElement"
+                        TextAlignment="{TemplateBinding TextAlignment}"
                         Margin="{TemplateBinding Margin}"
                         FlowDirection="{TemplateBinding FlowDirection}"
                         FontFamily="{TemplateBinding FontFamily}"

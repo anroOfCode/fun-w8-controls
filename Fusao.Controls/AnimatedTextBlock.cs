@@ -35,9 +35,6 @@ namespace Fusao.Controls
             _mainCanvas = GetTemplateChild("MainCanvas") as Canvas;
 
             if (!IsSurfaceBound()) return;
-            
-            _textBlock1.TextAlignment = TextAlignment.Right;
-            _textBlock2.TextAlignment = TextAlignment.Right;
 
             Canvas.SetLeft(_textBlock1, 0);
             Canvas.SetTop(_textBlock1, 0);
@@ -136,6 +133,8 @@ namespace Fusao.Controls
 
         private void PerformAnimation()
         {
+            InvalidateMeasure();
+
             DoubleAnimation visibleTextAnimation = SetupAndGenerateAnimation(this.VisibleTextBlock);
             DoubleAnimation hiddenTextAnimation = SetupAndGenerateAnimation(this.HiddenTextBlock);
 
@@ -318,6 +317,25 @@ namespace Fusao.Controls
                 SetValue(DurationProperty, value);
             }
         }
+
+        public static DependencyProperty TextAlignmentProperty = DependencyProperty.Register(
+            "TextAlignment",
+            typeof(TextAlignment),
+            typeof(AnimatedTextBlock),
+            new PropertyMetadata(TextAlignment.Left));
+
+        public TextAlignment TextAlignment
+        {
+            get
+            {
+                return (TextAlignment)GetValue(TextAlignmentProperty);
+            }
+            set
+            {
+                SetValue(TextAlignmentProperty, value);
+            }
+        }
+
         #endregion
     }
 }

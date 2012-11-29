@@ -15,7 +15,7 @@ namespace Fusao.Controls
             if (_dateTable == null) Initialize();
 
             TimeSpan span = DateTime.Now - date;
-
+            
             int i = _dateTable.Count - 1;
             while (true)
             {
