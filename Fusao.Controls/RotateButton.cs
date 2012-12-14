@@ -174,7 +174,7 @@ namespace Fusao.Controls
             {
                 if (this.IsVertical)
                 {
-                    return 90;
+                    return 270;
                 }
                 else
                 {
@@ -185,7 +185,7 @@ namespace Fusao.Controls
             {
                 if (this.IsVertical)
                 {
-                    return 270;
+                    return 90;
                 }
                 else
                 {
@@ -200,7 +200,7 @@ namespace Fusao.Controls
             {
                 if (this.IsVertical)
                 {
-                    return 270;
+                    return 90;
                 }
                 else
                 {
@@ -211,7 +211,7 @@ namespace Fusao.Controls
             {
                 if (this.IsVertical)
                 {
-                    return 90;
+                    return 270;
                 }
                 else
                 {

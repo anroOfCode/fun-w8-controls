@@ -83,4 +83,18 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="local:RedditVoteComment">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:RedditVoteComment">
+                    <StackPanel Orientation="Horizontal" Opacity="{TemplateBinding Opacity}">
+                        <Button Margin="5,10,5,0" Style="{StaticResource ReplyButtonStyle}" Command="{TemplateBinding AddComment}"  />
+                        <Button Foreground="{TemplateBinding UpColor}" Margin="5,10,5,0" Style="{StaticResource UpvoteButtonStyle}" Command="{TemplateBinding Upvote}"/>
+                        <Button Foreground="{TemplateBinding DownColor}" Margin="5,10,5,0" Style="{StaticResource DownvoteButtonStyle}" Command="{TemplateBinding Downvote}"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
